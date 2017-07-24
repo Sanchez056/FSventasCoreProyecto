@@ -1,0 +1,101 @@
+@model FSventasCore11.Models.Clientes
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Clientes</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Nombre" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Sexo" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Sexo" class="form-control" />
+                <span asp-validation-for="Sexo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Cedula" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Cedula" class="form-control" />
+                <span asp-validation-for="Cedula" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ProvinciaId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="ProvinciaId" class ="form-control" asp-items="ViewBag.ProvinciaId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="MunicipioId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="MunicipioId" class ="form-control" asp-items="ViewBag.MunicipioId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DistritoId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="DistritoId" class ="form-control" asp-items="ViewBag.DistritoId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SectorId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="SectorId" class ="form-control" asp-items="ViewBag.SectorId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Direccion" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Telefono" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Telefono" class="form-control" />
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Celular" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Celular" class="form-control" />
+                <span asp-validation-for="Celular" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Fecha" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Fecha" class="form-control" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
