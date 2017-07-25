@@ -29,7 +29,7 @@ namespace FSventasCore11.DAL
         public DbSet<Provincias> Provincias { get; set; }
         public DbSet<Municipios> Municipios { get; set; }
         public DbSet<DistritosMunicipales> DistritosMunicipales { get; set; }
-        public DbSet<Sectores> Parajes { get; set; }
+        public DbSet<Sectores> Sectores { get; set; }
         public DbSet<Ventas> Ventas { get; set; }
         public DbSet<VentasDetalles> VentasDetalles { get; set; }
     }

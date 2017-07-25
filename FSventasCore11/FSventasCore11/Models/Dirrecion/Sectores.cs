@@ -10,7 +10,7 @@ namespace FSventasCore11.Models.Dirrecion
     public class Sectores
     {
         [Key]
-        public int ParajeId { get; set; }
+        public int SectorId { get; set; }
         public string Nombre { get; set; }
         [ForeignKey("DistritosMunicipales")]
         public int DistritoId { get; set; }
